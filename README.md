@@ -16,16 +16,15 @@ The architecture is designed to minimize costs using **Spot Instances** and **AR
 * **Security:** IAM Roles (Least Privilege), Security Groups restricted to necessary ports, and dynamic SSH key generation.
 * **Automation:** `User Data` scripts handle Docker installation, world restoration, and scheduled backups (Cron).
 
-## Arquitectura de la Solución
+## Solution Architecture
 
-Aquí se detalla el flujo de infraestructura implementado en AWS:
+The following diagram illustrates the infrastructure workflow deployed on AWS:
 
 <p align="center">
-  <img src="./assets/architect.png" alt="Diagrama de Arquitectura AWS" width="800">
+  <img src="./assets/architect.png" alt="AWS Architecture Diagram" width="800">
 </p>
 
-*Figura 1: Infraestructura desplegada utilizando VPC, Subnets Públicas y EC2 con copias a S3.*
-=====
+*Figure 1: Deployed infrastructure utilizing VPC, Public Subnets, and EC2 with automated S3 backups.*
 
 ## 🚀 Key Features (Why this architecture?)
 1.  **Immutability:** The server can be destroyed and recreated at any time without data loss. The `user_data` script automatically fetches the latest backup from S3 upon boot.
