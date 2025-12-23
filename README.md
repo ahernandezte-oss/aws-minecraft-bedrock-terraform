@@ -16,6 +16,8 @@ The architecture is designed to minimize costs using **Spot Instances** and **AR
 * **Security:** IAM Roles (Least Privilege), Security Groups restricted to necessary ports, and dynamic SSH key generation.
 * **Automation:** `User Data` scripts handle Docker installation, world restoration, and scheduled backups (Cron).
 
+![Architecture Diagram](architecture.png)
+
 ## 🚀 Key Features (Why this architecture?)
 1.  **Immutability:** The server can be destroyed and recreated at any time without data loss. The `user_data` script automatically fetches the latest backup from S3 upon boot.
 2.  **FinOps/Cost Optimization:**
