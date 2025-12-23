@@ -1,0 +1,23 @@
+# .gitignore
+# Archivos de estado de Terraform (CONTIENEN DATOS SENSIBLES)
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+# Directorio de plugins de Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Llaves SSH y Credenciales (CRITICO: NUNCA SUBIR ESTO)
+*.pem
+*.key
+creds.txt
+.env
+
+# Logs y archivos temporales
+*.log
+crash-reports/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
